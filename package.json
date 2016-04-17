@@ -1,6 +1,6 @@
 {
   "name": "rock-paper-scissors-lizard-spock",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Pierre-Feuille-Ciseaux-Lezard-Spock",
   "main": "www/index.html",
   "scripts": {
