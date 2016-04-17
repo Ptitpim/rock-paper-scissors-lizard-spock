@@ -1,8 +1,12 @@
 {{#each players}}
-    <div>{{name}} - {{choiceLabel}} ({{choice}})</div>
+    <div class="choices">{{name}} - {{choiceLabel}} ({{choice}})</div>
 {{/each}}
 
-<div>{{winner.name}} gagne !</div>
+{{#if winner}}
+    <div class="results">{{winner.name}} gagne !</div>
+{{else}}
+    <div class="results">égalité</div>
+{{/if}}
 
 <div class="button-container">
     <a href="#" class="button">Rejouer</a>

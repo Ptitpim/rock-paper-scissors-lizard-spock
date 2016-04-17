@@ -10,6 +10,10 @@ class ResultsController {
 
     render() {
         let div = document.createElement('div');
+        div.classList.add('results-container');
+        if (this.params.winner) {
+            div.classList.add('player-'+ this.params.winner.id);
+        }
         div.innerHTML = this.tpl(this.params);
 
         this.startButton = div.querySelector('.button');

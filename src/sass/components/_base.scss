@@ -11,13 +11,14 @@ html {
 
 h1 {
   color: #039BE5;
+  font-size: 30px;
 
   .player-0 & {
-    color: #F44336;
+    color: $player-0-color;
   }
 
   .player-1 & {
-    color: #4CAF50;
+    color: $player-1-color;
   }
 }
 
