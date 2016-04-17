@@ -2,7 +2,12 @@
 
 @import "vendors/normalize";
 
-@import "base";
+@import "components/variables";
+//@import "components/fonts";
+@import "components/base";
 
-@import "layout/header";
-@import "layout/footer";
+@import "components/header";
+@import "components/footer";
+
+@import "components/player-choices";
+@import "components/results-container";

@@ -1,0 +1,21 @@
+.results-container {
+  .choices {
+
+  }
+
+  .results {
+    margin: 20px 0;
+  }
+
+  &.player-0 {
+    .results {
+      color: $player-0-color;
+    }
+  }
+
+  &.player-1 {
+    .results {
+      color: $player-1-color;
+    }
+  }
+}
