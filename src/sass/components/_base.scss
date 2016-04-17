@@ -1,0 +1,38 @@
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.main-content {
+  margin-top: 64px;
+  padding: 20px;
+}
+
+h1 {
+  color: #039BE5;
+
+  .player-0 & {
+    color: #F44336;
+  }
+
+  .player-1 & {
+    color: #4CAF50;
+  }
+}
+
+.button-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  background-color: $button-background-color;
+  color: $button-text-color;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}

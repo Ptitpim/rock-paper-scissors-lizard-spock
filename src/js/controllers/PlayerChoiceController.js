@@ -10,6 +10,8 @@ class PlayerChoiceController {
 
     render() {
         let div = document.createElement('div');
+        div.classList.add('player-choice-view');
+        div.classList.add('player-'+ this.params.player.id);
         div.innerHTML = this.tpl(this.params);
 
         this.choices = div.querySelector('.player-choices');
