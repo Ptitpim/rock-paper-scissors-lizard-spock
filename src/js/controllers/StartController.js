@@ -8,6 +8,7 @@ class StartController {
 
     render() {
         let div = document.createElement('div');
+        div.classList.add('start');
         div.innerHTML = this.startTpl();
 
         this.startButton = div.querySelector('.button');
