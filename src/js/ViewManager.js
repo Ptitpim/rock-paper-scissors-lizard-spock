@@ -4,6 +4,9 @@ import StartController from './controllers/StartController';
 import PlayerChoiceController from './controllers/PlayerChoiceController.js';
 import ResultsController from './controllers/ResultsController.js';
 
+/**
+ * View Manager
+ */
 class ViewManager {
     constructor(container) {
         this.currentController = null;
@@ -22,7 +25,7 @@ class ViewManager {
      * @param {Object} params - controller parameters
      */
     loadView(controller, params = {}) {
-        console.info(`Load ${controller}Controller`);
+        // console.info(`Load ${controller}Controller`);
         this.currentController = new this.controllers[controller](params);
 
         this.el.appendChild(this.currentController.render());

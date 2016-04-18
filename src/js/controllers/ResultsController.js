@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * Results Controller
+ */
 class ResultsController {
     constructor(params = {}) {
         this.params = params;
@@ -8,6 +11,11 @@ class ResultsController {
         this.tpl = require('../../templates/results.hbs');
     }
 
+    /**
+     * Render the view
+     *
+     * @returns {Object} - DOM element
+     */
     render() {
         let div = document.createElement('div');
         div.classList.add('results-container');
@@ -22,10 +30,18 @@ class ResultsController {
         return div;
     }
 
+    /**
+     * Destroy the view
+     */
     destroy() {
         this.startButton.removeEventListener('click', this.startHandler);
     }
 
+    /**
+     * Restart button handler
+     *
+     * @param {Event} e - DOM event
+     */
     startHandler(e) {
         e.preventDefault();
 
