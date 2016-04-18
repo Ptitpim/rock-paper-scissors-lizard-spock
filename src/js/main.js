@@ -54,6 +54,11 @@ let choices = [
     }
 ];
 
+/**
+ * Result the result of the match
+ *
+ * @returns {Object}
+ */
 function getResults() {
     let winner;
     let c1 = players[0].choice;
@@ -87,7 +92,7 @@ function getResults() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.info('DOM loaded');
+    // console.info('DOM loaded');
 
     headerController = new HeaderController(document.querySelector('.main-header'), players);
     headerController.render();
@@ -96,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('StartGame', function(e) {
-    console.log('start The Game');
+    // console.log('start The Game');
 
     viewManager.unloadView();
 
@@ -111,7 +116,7 @@ document.addEventListener('StoreChoice', function(e) {
     let playerName = e.detail.player.name;
     let playerChoice = e.detail.player.choice;
 
-    console.log(`${playerName} choose ${playerChoice}`);
+    // console.log(`${playerName} choose ${playerChoice}`);
 
     players[playerID].choice = playerChoice;
 

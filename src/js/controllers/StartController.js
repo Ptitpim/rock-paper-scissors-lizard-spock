@@ -1,11 +1,19 @@
 'use strict';
 
+/**
+ * Start Controller
+ */
 class StartController {
     constructor() {
         // Handlebars templates
         this.startTpl = require('../../templates/start.hbs');
     }
 
+    /**
+     * Render the view
+     *
+     * @returns {Object} - DOM element
+     */
     render() {
         let div = document.createElement('div');
         div.classList.add('start');
@@ -17,10 +25,18 @@ class StartController {
         return div;
     }
 
+    /**
+     * Destroy the view
+     */
     destroy() {
         this.startButton.removeEventListener('click', this.startHandler);
     }
 
+    /**
+     * Start button handler
+     *
+     * @param {Event} e - DOM event
+     */
     startHandler(e) {
         e.preventDefault();
 

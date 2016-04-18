@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * Player Choice Controller
+ */
 class PlayerChoiceController {
     constructor(params = {}) {
         this.params = params;
@@ -8,6 +11,11 @@ class PlayerChoiceController {
         this.tpl = require('../../templates/player-choice.hbs');
     }
 
+    /**
+     * Render the view
+     *
+     * @returns {Object} - DOM element
+     */
     render() {
         let div = document.createElement('div');
         div.classList.add('player-choice-view');
@@ -20,10 +28,18 @@ class PlayerChoiceController {
         return div;
     }
 
+    /**
+     * Destroy the view
+     */
     destroy() {
         this.choices.removeEventListener('click', this.choiceHandler);
     }
 
+    /**
+     * Choice handler
+     *
+     * @param {Event} e - DOM event
+     */
     choiceHandler(e) {
         e.preventDefault();
 
