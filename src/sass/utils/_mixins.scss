@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@mixin distribute-on-circle ($nb-items, $circle-size, $item-size) {
+  $half-item: ($item-size / 2);
+  $half-parent: ($circle-size / 2);
+
+  position: relative;
+  width:  $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+
+  > * {
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    width:  $item-size;
+    height: $item-size;
+    margin-top: -$half-item;
+    margin-left: -$half-item;
+  }
+
+  $angle: (360 / $nb-items);
+  $rot: 0;
+
+  @for $i from 1 through $nb-items {
+    > :nth-of-type(#{$i}) {
+      transform: rotate($rot * 1deg) translate($half-parent) rotate($rot * -1deg);
+      background-color: nth($circles-colors, $i);
+    }
+
+    $rot: ($rot + $angle);
+  }
+}

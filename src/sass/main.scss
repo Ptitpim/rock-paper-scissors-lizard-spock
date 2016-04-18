@@ -2,7 +2,9 @@
 
 @import "vendors/normalize";
 
-@import "components/variables";
+@import "utils/variables";
+@import "utils/mixins";
+
 //@import "components/fonts";
 @import "components/base";
 

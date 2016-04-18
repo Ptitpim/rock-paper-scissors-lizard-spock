@@ -1,15 +1,16 @@
 @charset "UTF-8";
 
 .player-choices {
+  @include distribute-on-circle(5, 200px, 80px);
+
   list-style-type: none;
   padding: 0;
+  margin: 70px auto 0;
   text-align: center;
 
   li {
     display: inline-block;
     background-color: #E0E0E0;
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
   }
 
